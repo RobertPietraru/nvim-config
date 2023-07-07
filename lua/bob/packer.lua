@@ -6,12 +6,15 @@ return require('packer').startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+	use 'nvim-tree/nvim-web-devicons'
 	use 'navarasu/onedark.nvim'
 	use('nvim-treesitter/nvim-treesitter', {run = ":TSUpdate"})
 	use 'ThePrimeagen/harpoon'
 	use 'mbbill/undotree'
 	use 'tpope/vim-fugitive'
 	use 'folke/trouble.nvim'
+	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+	use 'nvim-lualine/lualine.nvim'
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
@@ -48,6 +51,5 @@ return require('packer').startup(function(use)
 			'stevearc/dressing.nvim', -- optional for vim.ui.select
 		},
 	}
-	use 'nvim-tree/nvim-web-devicons'
 end)
 
