@@ -31,6 +31,15 @@ return require('packer').startup(function(use)
 		{'L3MON4D3/LuaSnip'},     -- Required
 		}
 	}
-	use "sindrets/diffview.nvim"
+
+
+	use {
+		'TimUntersberger/neogit',
+		requires = {
+			'nvim-lua/plenary.nvim',
+			'sindrets/diffview.nvim'
+		}
+	}
+	use 'nvim-tree/nvim-web-devicons'
 end)
 

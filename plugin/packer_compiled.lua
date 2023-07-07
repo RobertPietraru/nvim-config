@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neogit = {
+    loaded = true,
+    path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neogit",
+    url = "https://github.com/TimUntersberger/neogit"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
