@@ -11,7 +11,6 @@ return require('packer').startup(function(use)
 	use 'ThePrimeagen/harpoon'
 	use 'mbbill/undotree'
 	use 'tpope/vim-fugitive'
-	use 'vim-airline/vim-airline'
 	use 'folke/trouble.nvim'
 	use {
 		'VonHeikemen/lsp-zero.nvim',
@@ -41,6 +40,13 @@ return require('packer').startup(function(use)
 			'nvim-lua/plenary.nvim',
 			'sindrets/diffview.nvim'
 		}
+	}
+
+	use {
+		'akinsho/flutter-tools.nvim',
+		requires = {
+			'stevearc/dressing.nvim', -- optional for vim.ui.select
+		},
 	}
 	use 'nvim-tree/nvim-web-devicons'
 end)

@@ -23,10 +23,10 @@ lsp.ensure_installed({
 })
 
 
-local lsp_config = require('lspconfig');
-lsp_config.dartls.setup({
-	cmd = { "dart", "language-server", "--protocol=lsp" },
-})
+--local lsp_config = require('lspconfig');
+--lsp_config.dartls.setup({
+--	cmd = { "dart", "language-server", "--protocol=lsp" },
+--})
 
 lsp.setup()
 

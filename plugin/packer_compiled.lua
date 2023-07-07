@@ -89,6 +89,16 @@ _G.packer_plugins = {
     path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\diffview.nvim",
     url = "https://github.com/sindrets/diffview.nvim"
   },
+  ["dressing.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dressing.nvim",
+    url = "https://github.com/stevearc/dressing.nvim"
+  },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\harpoon",
@@ -129,6 +139,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["onedark.nvim"] = {
     loaded = true,
     path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\onedark.nvim",
@@ -148,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   undotree = {
     loaded = true,
