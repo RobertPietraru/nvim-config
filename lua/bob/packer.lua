@@ -11,6 +11,8 @@ return require('packer').startup(function(use)
 	use 'ThePrimeagen/harpoon'
 	use 'mbbill/undotree'
 	use 'tpope/vim-fugitive'
+	use 'vim-airline/vim-airline'
+	use 'folke/trouble.nvim'
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
