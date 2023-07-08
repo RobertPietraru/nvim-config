@@ -14,7 +14,19 @@ return require('packer').startup(function(use)
 	use 'tpope/vim-fugitive'
 	use 'folke/trouble.nvim'
 	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+	use 'nvim-tree/nvim-tree.lua'
 	use 'nvim-lualine/lualine.nvim'
+	use  'numToStr/Comment.nvim'
+	use({
+		"Pocco81/auto-save.nvim",
+		config = function()
+			require("auto-save").setup {
+				-- your config goes here
+				-- or just leave it empty :)
+			}
+		end,
+	})
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',

@@ -23,7 +23,17 @@ lsp.ensure_installed({
 })
 
 
---local lsp_config = require('lspconfig');
+local lsp_config = require('lspconfig');
+lsp_config.lua_ls.setup {
+	settings = {
+    Lua = {
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+    },
+  },
+}
 --lsp_config.dartls.setup({
 --	cmd = { "dart", "language-server", "--protocol=lsp" },
 --})
@@ -36,6 +46,7 @@ local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
   mapping = {
-      ['<CR>'] = cmp.mapping.confirm({select = false}),
+	['<CR>'] = cmp.mapping.confirm({select = false}),
+	['<C-Space>'] = cmp.mapping.complete(),
   }
 })
