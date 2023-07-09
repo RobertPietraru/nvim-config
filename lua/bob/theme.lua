@@ -44,3 +44,9 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+--
+vim.cmd [[ sign define DiagnosticSignError text=🤬 linehl= texthl=DiagnosticSignError numhl= 
+sign define DiagnosticSignWarn text= linehl= texthl=DiagnosticSignWarn numhl= 
+sign define DiagnosticSignInfo text=  linehl= texthl=DiagnosticSignInfo numhl= 
+sign define DiagnosticSignHint text=💡  linehl= texthl=DiagnosticSignHint numhl= 
+]]

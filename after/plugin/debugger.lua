@@ -1,4 +1,5 @@
-require("dapui").setup()
+local dapui = require("dapui")
+dapui.setup()
 
 vim.keymap.set('n', '<leader>]', function() require('dap').continue() end)
 vim.keymap.set('n', '<leader>[', function() require('dap').step_over() end)
@@ -21,10 +22,7 @@ vim.keymap.set('n', '<Leader>df', function()
 	local widgets = require('dap.ui.widgets')
 	widgets.centered_float(widgets.frames)
 end)
-vim.keymap.set('n', '<Leader>ds', function()
-	local widgets = require('dap.ui.widgets')
-	widgets.centered_float(widgets.scopes)
-end)
-
 
 vim.fn.sign_define('DapBreakpoint', {text='🛑', texthl='red', linehl='', numhl=''})
+
+vim.keymap.set('n', '<leader>dt', function() require('dapui').toggle() end)
