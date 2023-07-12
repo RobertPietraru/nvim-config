@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
 	use 'nvim-tree/nvim-tree.lua'
 	use 'nvim-lualine/lualine.nvim'
 	use  'numToStr/Comment.nvim'
+	use 'RobertPietraru/bloc.nvim'
 	use({
 		"Pocco81/auto-save.nvim",
 		config = function()
