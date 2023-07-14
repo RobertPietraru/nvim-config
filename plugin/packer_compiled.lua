@@ -85,10 +85,15 @@ _G.packer_plugins = {
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["auto-save.nvim"] = {
-    config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14auto-save\frequire\0" },
+    config = { "\27LJ\2\n;\0\0\2\0\4\0\0066\0\0\0009\0\1\0009\0\2\0009\0\3\0B\0\1\1K\0\1\0\20formatting_sync\bbuf\blsp\bvim…\2\1\2\b\1\14\0\0319\2\0\0'\4\1\0B\2\2\2\15\0\2\0X\3\25Ä6\2\2\0009\2\3\0029\2\4\2\18\4\1\0'\5\5\0003\6\6\0004\a\0\0B\2\5\0016\2\2\0009\2\3\0029\2\a\0025\4\b\0-\5\0\0=\5\t\4=\1\n\4B\2\2\0016\2\2\0009\2\3\0029\2\v\2'\4\f\0005\5\r\0-\6\0\0=\6\t\5=\1\n\5B\2\3\1K\0\1\0\0\0\1\0\1\fcommand\29undojoin | LspFormatting\16BufWritePre\24nvim_create_autocmd\vbuffer\ngroup\1\0\0\24nvim_clear_autocmds\0\18LspFormatting!nvim_buf_create_user_command\bapi\bvim\28textDocument/formatting\20supports_methodS\1\0\4\1\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\2B\0\2\1K\0\1\0\0\0\14on_attach\1\0\0\0\nsetup\14auto-save\frequire\0" },
     loaded = true,
     path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\auto-save.nvim",
     url = "https://github.com/Pocco81/auto-save.nvim"
+  },
+  ["bloc.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bloc.nvim",
+    url = "https://github.com/RobertPietraru/bloc.nvim"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
@@ -139,6 +144,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neogit",
     url = "https://github.com/TimUntersberger/neogit"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\rob_p\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -215,7 +225,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: auto-save.nvim
 time([[Config for auto-save.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14auto-save\frequire\0", "config", "auto-save.nvim")
+try_loadstring("\27LJ\2\n;\0\0\2\0\4\0\0066\0\0\0009\0\1\0009\0\2\0009\0\3\0B\0\1\1K\0\1\0\20formatting_sync\bbuf\blsp\bvim…\2\1\2\b\1\14\0\0319\2\0\0'\4\1\0B\2\2\2\15\0\2\0X\3\25Ä6\2\2\0009\2\3\0029\2\4\2\18\4\1\0'\5\5\0003\6\6\0004\a\0\0B\2\5\0016\2\2\0009\2\3\0029\2\a\0025\4\b\0-\5\0\0=\5\t\4=\1\n\4B\2\2\0016\2\2\0009\2\3\0029\2\v\2'\4\f\0005\5\r\0-\6\0\0=\6\t\5=\1\n\5B\2\3\1K\0\1\0\0\0\1\0\1\fcommand\29undojoin | LspFormatting\16BufWritePre\24nvim_create_autocmd\vbuffer\ngroup\1\0\0\24nvim_clear_autocmds\0\18LspFormatting!nvim_buf_create_user_command\bapi\bvim\28textDocument/formatting\20supports_methodS\1\0\4\1\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0003\3\3\0=\3\5\2B\0\2\1K\0\1\0\0\0\14on_attach\1\0\0\0\nsetup\14auto-save\frequire\0", "config", "auto-save.nvim")
 time([[Config for auto-save.nvim]], false)
 
 _G._packer.inside_compile = false

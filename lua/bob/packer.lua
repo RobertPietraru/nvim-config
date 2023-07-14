@@ -1,3 +1,4 @@
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 return require('packer').startup(function(use)
   -- Packer can manage itself
 	use 'wbthomason/packer.nvim'
@@ -19,12 +20,32 @@ return require('packer').startup(function(use)
 	use 'nvim-lualine/lualine.nvim'
 	use  'numToStr/Comment.nvim'
 	use 'RobertPietraru/bloc.nvim'
+	use 'jose-elias-alvarez/null-ls.nvim'
 	use({
 		"Pocco81/auto-save.nvim",
 		config = function()
 			require("auto-save").setup {
-				-- your config goes here
-				-- or just leave it empty :)
+    on_attach = function(client, bufnr)
+        if client.supports_method("textDocument/formatting") then
+            vim.api.nvim_buf_create_user_command(bufnr, "LspFormatting", function()
+                -- or vim.lsp.buf.formatting(bufnr) on 0.8
+                vim.lsp.buf.formatting_sync()
+            end, {})
+
+            -- you can leave this out if your on_attach is unique to null-ls,
+            -- but if you share it with multiple servers, you'll want to keep it
+            vim.api.nvim_clear_autocmds({
+                group = augroup,
+                buffer = bufnr,
+            })
+
+            vim.api.nvim_create_autocmd("BufWritePre", {
+                group = augroup,
+                buffer = bufnr,
+                command = "undojoin | LspFormatting",
+            })
+        end
+    end,
 			}
 		end,
 	})

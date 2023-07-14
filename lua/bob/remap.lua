@@ -7,3 +7,5 @@ vim.keymap.set("n", "<leader>l", "<C-w>l")
 
 vim.keymap.set({"v", "n"}, "<C-c>", "\"+y <CR>")
 vim.keymap.set({"v", "n"}, "<leader>c", "\"+y <CR>")
+
+-- vim.keymap.set("n", "<leader>ll", "ebv%d")
