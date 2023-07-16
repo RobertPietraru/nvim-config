@@ -12,7 +12,6 @@ return require('packer').startup(function(use)
 	use('nvim-treesitter/nvim-treesitter', {run = ":TSUpdate"})
 	use 'ThePrimeagen/harpoon'
 	use 'mbbill/undotree'
-	use 'tpope/vim-fugitive'
 	use 'folke/trouble.nvim'
 	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 	use 'mfussenegger/nvim-dap'
