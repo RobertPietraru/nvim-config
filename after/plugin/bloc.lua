@@ -28,8 +28,3 @@ vim.keymap.set("n", "<leader>Q", function()
 	bloc.create_bloc(input, clipboard_after)
 end)
 bloc.setup()
-
-vim.keymap.set("n", "tt", function()
-		vim.lsp.buf.format()
-end)
-
