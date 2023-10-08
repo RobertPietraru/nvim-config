@@ -2,116 +2,40 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.2',
-		-- or                            , branch = '0.1.x',
-		requires = { { 'nvim-lua/plenary.nvim' } }
-	}
-	use 'nvim-tree/nvim-web-devicons'
-	use 'navarasu/onedark.nvim'
-	use('nvim-treesitter/nvim-treesitter', { run = ":TSUpdate" })
+	use 'nvim-lua/plenary.nvim' 
+
+	-- navigation
 	use 'ThePrimeagen/harpoon'
-	use 'mbbill/undotree'
-	use 'folke/trouble.nvim'
-	use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
-	use 'mfussenegger/nvim-dap'
-	use 'nvim-tree/nvim-tree.lua'
-	use 'nvim-lualine/lualine.nvim'
-	use 'numToStr/Comment.nvim'
-	use 'RobertPietraru/bloc.nvim'
-	use 'jose-elias-alvarez/null-ls.nvim'
+	use {
+	  'nvim-telescope/telescope.nvim', tag = '0.1.3',
+	  requires = { {'nvim-lua/plenary.nvim'} }
+	}
+
+	-- utilities
 	use({
 		"Pocco81/auto-save.nvim",
 		config = function()
-			require("auto-save").setup {
-				on_attach = function(client, bufnr)
-					if client.supports_method("textDocument/formatting") then
-						vim.api.nvim_buf_create_user_command(bufnr, "LspFormatting", function()
-							-- or vim.lsp.buf.formatting(bufnr) on 0.8
-							vim.lsp.buf.formatting_sync()
-						end, {})
-
-						-- you can leave this out if your on_attach is unique to null-ls,
-						-- but if you share it with multiple servers, you'll want to keep it
-						vim.api.nvim_clear_autocmds({
-							group = augroup,
-							buffer = bufnr,
-						})
-
-						vim.api.nvim_create_autocmd("BufWritePre", {
-							group = augroup,
-							buffer = bufnr,
-							command = "undojoin | LspFormatting",
-						})
-					end
-				end,
-			}
+			 require("auto-save").setup { }
 		end,
 	})
 
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
-		requires = {
-			-- LSP Support
-			{ 'neovim/nvim-lspconfig' }, -- Required
-			{                 -- Optional
-				'williamboman/mason.nvim',
-				run = function()
-					pcall(vim.cmd, 'MasonUpdate')
-				end,
-			},
-			{ 'williamboman/mason-lspconfig.nvim' }, -- Optional
+	use({
+  "NeogitOrg/neogit",
+  requires = {
+	{"nvim-lua/plenary.nvim", opt=false},         -- required
+	{"nvim-telescope/telescope.nvim", opt=true}, -- optional
+	{"sindrets/diffview.nvim", opt=true},        -- optional
+  },
+  config = true
+})
 
-			-- Autocompletion
-			{ 'hrsh7th/nvim-cmp' }, -- Required
-			{ 'hrsh7th/cmp-nvim-lsp' }, -- Required
-			{ 'L3MON4D3/LuaSnip' }, -- Required
-		}
-	}
+	-- git
 
-
-	use {
-		'TimUntersberger/neogit',
-		requires = {
-			'nvim-lua/plenary.nvim',
-			'sindrets/diffview.nvim'
-		}
-	}
-
-	use {
-		'akinsho/flutter-tools.nvim',
-		requires = {
-			'stevearc/dressing.nvim', -- optional for vim.ui.select
-		},
-	}
-
-	-- php & laravel plugins
-
-	use {
-		"adalessa/laravel.nvim",
-		requires = {
-			"nvim-telescope/telescope.nvim",
-			"tpope/vim-dotenv",
-			"MunifTanjim/nui.nvim",
-		},
-		-- cmd = { "Sail", "Artisan", "Composer", "Npm", "Yarn", "Laravel" },
-		-- keys = {
-		-- 	{ "<leader>la", ":Laravel artisan<cr>" },
-		-- 	{ "<leader>lr", ":Laravel routes<cr>" },
-		-- 	{ "<leader>lm", ":Laravel related<cr>" },
-		-- 	{
-		-- 		"<leader>lt",
-		-- 		function()
-		-- 			require("laravel.tinker").send_to_tinker()
-		-- 		end,
-		-- 		mode = "v",
-		-- 		desc = "Laravel Application Routes",
-		-- 	},
-		-- },
-		config = function()
-			require("laravel").setup()
-			require("telescope").load_extension "laravel"
-		end,
-	}
+	-- theme 
+	use 'navarasu/onedark.nvim'
+	use 'nvim-lualine/lualine.nvim'
 end)
+-- this might be useful in the future, when I decide to add the explorer tree, so yk, keep that in mind mate
+--use 'nvim-tree/nvim-web-devicons'
+--
+--

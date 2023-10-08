@@ -1,4 +1,3 @@
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
-vim.keymap.set("n", "<leader>a", mark.add_file)
-vim.keymap.set("n", "<leader><tab>", ui.toggle_quick_menu)
+vim.keymap.set({"n", "v"}, "<leader><tab>", ":lua require(\"harpoon.ui\").toggle_quick_menu()<CR>")
+vim.keymap.set({"n", "v"}, "<leader>w", ":lua require(\"harpoon.mark\").add_file()<CR>")
+
