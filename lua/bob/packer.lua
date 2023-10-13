@@ -11,6 +11,9 @@ return require('packer').startup(function(use)
 	}
 
 	-- utilities
+	use({ "folke/trouble.nvim",
+	 requires = { "nvim-tree/nvim-web-devicons" },
+	})
 	use({
 		"Pocco81/auto-save.nvim",
 		config = function()
