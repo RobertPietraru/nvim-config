@@ -11,9 +11,7 @@ return require('packer').startup(function(use)
 	}
 
 	-- utilities
-	use({ "folke/trouble.nvim",
-	 requires = { "nvim-tree/nvim-web-devicons" },
-	})
+	use 'folke/trouble.nvim'
 	use({
 		"Pocco81/auto-save.nvim",
 		config = function()
@@ -33,10 +31,16 @@ return require('packer').startup(function(use)
 	})
 
 	-- theme
+	use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
 	use 'navarasu/onedark.nvim'
 	use 'nvim-lualine/lualine.nvim'
 
 	-- lsp
+	use {'nvim-telescope/telescope-ui-select.nvim' }
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
