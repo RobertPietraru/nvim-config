@@ -1,7 +1,7 @@
 require('onedark').setup {
 	colors = {
 		-- bright_orange = "#ff8800",    -- define a new color
-		cyan = '$light_grey',            -- redefine an existing color
+		cyan = '$light_grey', -- redefine an existing color
 		custom_grey = "abb2bf"
 	},
 	highlights = {
@@ -10,7 +10,7 @@ require('onedark').setup {
 		["@string"] = { fg = '$green', },
 		["@attribute"] = { fg = '$purple', },
 		["@property"] = { fg = '$custom_grey', },
-        ["@variable.builtin"] ={ fg = '$custom_grey', },
+		["@variable.builtin"] = { fg = '$custom_grey', },
 		["@lsp.type.parameter"] = { fg = '$custom_grey', },
 		["@parameter"] = { fg = '$custom_grey', },
 	}
@@ -45,7 +45,12 @@ require('lualine').setup {
 	sections = {
 		lualine_a = { 'mode' },
 		lualine_b = { 'branch', 'diff', 'diagnostics' },
-		lualine_c = { 'filename' },
+		lualine_c = {
+			{
+				'filename',
+				path = 1,
+			}
+		},
 		lualine_x = { 'encoding', 'fileformat', 'filetype' },
 		lualine_y = { 'progress' },
 		lualine_z = { 'location' }

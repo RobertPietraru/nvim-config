@@ -12,6 +12,8 @@ return require('packer').startup(function(use)
 
 	-- utilities
 	use 'folke/trouble.nvim'
+
+
 	use({
 		"Pocco81/auto-save.nvim",
 		config = function()
@@ -31,16 +33,18 @@ return require('packer').startup(function(use)
 	})
 
 	-- theme
+	use 'nvim-tree/nvim-tree.lua'
+	use 'nvim-tree/nvim-web-devicons'
 	use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate'
+	}
 
 	use 'navarasu/onedark.nvim'
 	use 'nvim-lualine/lualine.nvim'
 
 	-- lsp
-	use {'nvim-telescope/telescope-ui-select.nvim' }
+	use { 'nvim-telescope/telescope-ui-select.nvim' }
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
@@ -57,6 +61,17 @@ return require('packer').startup(function(use)
 			{ 'hrsh7th/nvim-cmp' },
 			{ 'hrsh7th/cmp-nvim-lsp' },
 			{ 'L3MON4D3/LuaSnip' },
+		}
+	}
+	use {
+		'numToStr/Comment.nvim',
+
+	}
+
+	-- flutter
+	use { 'RobertPietraru/bloc.nvim',
+		requires = {
+			{ 'jose-elias-alvarez/null-ls.nvim' },
 		}
 	}
 end)
