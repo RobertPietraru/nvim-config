@@ -70,6 +70,7 @@ return require('packer').startup(function(use)
 
 	-- flutter
 	use { 'RobertPietraru/bloc.nvim',
+		branch = 'fix_creation',
 		requires = {
 			{ 'jose-elias-alvarez/null-ls.nvim' },
 		}
